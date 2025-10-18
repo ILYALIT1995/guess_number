@@ -1,9 +1,9 @@
-def find_with_substring(t, s):
-    rst = []
-    for tt in t:
-        if s in tt.lower():
-            rst.append(tt)
-    return rst
+def find_texts_with_substring(texts, substring):
+    matching_texts = []
+    for text in texts:
+        if substring in str.lower(text):
+            matching_texts.append(text)
+    return matching_texts
 
 
 original_texts = [
@@ -11,6 +11,8 @@ original_texts = [
     "Кот и кошка гуляют по двору",
     "Бутерброд лежит на столе маслом вниз",
 ]
-what_find = "ма"
+what_to_find = "ма"
 
-print("Подходящие строки:", find_with_substring(original_texts, what_find))
+print(
+    "Подходящие строки:",
+    find_texts_with_substring(original_texts, what_to_find))
